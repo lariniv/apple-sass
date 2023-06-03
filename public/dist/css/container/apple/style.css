@@ -1,0 +1,324 @@
+.section, .header, .ad, .product, .footer {
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.section__content, .header__content, .ad__content, .footer__content {
+  max-width: 1200px;
+  width: 100%;
+}
+@media all and (width < 1440px) {
+  .section__content, .header__content, .ad__content, .footer__content {
+    max-width: 1100px;
+  }
+}
+@media all and (width < 1260px) {
+  .section__content, .header__content, .ad__content, .footer__content {
+    max-width: 900px;
+  }
+}
+@media all and (width < 1000px) {
+  .section__content, .header__content, .ad__content, .footer__content {
+    max-width: 700px;
+  }
+}
+@media all and (width < 620px) {
+  .section__content, .header__content, .ad__content, .footer__content {
+    max-width: 500px;
+  }
+}
+
+.section__double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media all and (width < 1260px) {
+  .section__double {
+    grid-template-columns: 1fr;
+  }
+}
+
+.header {
+  background-color: #454545;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__block {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.header__icon {
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.header__icon:hover {
+  opacity: 0.7;
+}
+.header__icon:active {
+  opacity: 0.3;
+}
+
+.header__link {
+  color: #dadada;
+  font-size: 12px;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.header__link:hover {
+  opacity: 0.7;
+}
+.header__link:active {
+  opacity: 0.3;
+}
+
+.ad {
+  background-color: #fff;
+  max-height: 45px;
+  height: 100%;
+}
+
+.ad__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ad__title {
+  color: #1d1d1f;
+  font-size: 14px;
+}
+
+.ad__link {
+  transition: opacity 0.7s;
+  cursor: pointer;
+  color: #2997FF;
+  padding-right: 15px;
+  position: relative;
+}
+.ad__link:hover {
+  opacity: 0.7;
+}
+.ad__link:active {
+  opacity: 0.3;
+}
+.ad__link::after {
+  display: block;
+  content: "";
+  width: 7px;
+  height: 14px;
+  background-image: url("/svg/arrowAction.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 6px);
+}
+
+.product {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
+.product__content {
+  display: grid;
+  gap: 20px;
+  text-align: center;
+  align-content: center;
+}
+
+.product__title {
+  font-size: 56px;
+  font-weight: 600;
+}
+
+.product__text {
+  font-size: 28px;
+}
+
+.product__action {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.product__action:hover {
+  opacity: 0.7;
+}
+.product__action:active {
+  opacity: 0.3;
+}
+
+.procut__link {
+  color: #2997FF;
+  padding-right: 15px;
+  position: relative;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.procut__link::after {
+  display: block;
+  content: "";
+  width: 7px;
+  height: 14px;
+  background-image: url("/svg/arrowAction.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 6px);
+}
+.procut__link:hover {
+  opacity: 0.7;
+}
+.procut__link:active {
+  opacity: 0.3;
+}
+
+.product-big {
+  max-height: 700px;
+  height: 100vh;
+  background-size: cover;
+}
+@media all and (width < 1000px) {
+  .product-big {
+    background-size: 150%;
+    max-height: 500px;
+  }
+}
+
+.product-small {
+  max-height: 580px;
+  height: 100vh;
+  background-size: cover;
+}
+@media all and (width < 1000px) {
+  .product-small {
+    background-size: 150%;
+    max-height: 500px;
+  }
+}
+.product-small .product__tile {
+  font-size: 40px;
+}
+.product-small .product__text {
+  font-size: 20px;
+}
+
+.product--dark {
+  background-color: #000;
+}
+.product--dark .product__title, .product--dark .product__text {
+  color: #F5F5F7;
+}
+
+.product--top .product__content {
+  align-content: flex-start;
+}
+
+.product--bottom .product__content {
+  align-content: flex-end;
+}
+
+.product--light .product__title, .product--light .product__text {
+  color: #1d1d1f;
+}
+
+.product--iphone-pro {
+  background-image: url(/img/iphone14pro.png);
+  background-color: #000;
+}
+
+.product--iphone {
+  background-image: url(/img/iphone.png);
+  background-color: #fafafa;
+}
+
+.product--trade-in {
+  background-image: url(/img/trade_in.png);
+  background-color: #fbfbfd;
+}
+
+.product--conference {
+  background-image: url(/img/conference.png);
+  background-color: #000;
+}
+
+.product--iwatch {
+  background-image: url(/img/iwatch.png);
+  background-color: #000;
+}
+
+.product--ipad {
+  background-image: url(/img/ipad.png);
+  background-color: #fbfbfd;
+}
+
+.product--small-business {
+  background-image: url(/img/small_business.png);
+  background-color: #000;
+}
+
+.product--gift {
+  background-image: url(/img/gift.png);
+  background-color: #fbfbfd;
+}
+
+.product--card {
+  background-image: url(/img/card.png);
+  background-color: #fbfbfd;
+}
+
+.footer {
+  background-color: #F5F5F7;
+  padding-bottom: 40px;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+  font-size: 12px;
+  padding-top: 40px;
+}
+
+.footer__title {
+  font-weight: 600;
+}
+
+.footer__block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__link {
+  color: #424245;
+  display: block;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.footer__link:hover {
+  opacity: 0.7;
+}
+.footer__link:active {
+  opacity: 0.3;
+}
+
+/*# sourceMappingURL=style.css.map */
